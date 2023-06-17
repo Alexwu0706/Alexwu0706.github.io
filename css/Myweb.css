@@ -1,0 +1,27 @@
+.fontstyle{
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.fontsize{
+    font-size:20px;
+    color: black;
+}
+
+div {
+    cursor: pointer;
+    margin: auto;
+    font-size: 5vmin;
+    font-weight: 300;
+    transition: font-weight 250ms ease-in-out;
+  }
+
+h1:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1px;
+}
+
+p {
+    color:brown
+}

@@ -1,20 +1,12 @@
 /*-----------------------------------------------------default setting------------------------------------------------*/
-.fontstyle{
-    font-family:sans-serif;
-}
-
-.fontsize{
-    font-size:20px;
-    color: black;
-}
-
 p{
     font-size: 30px;
     font-weight: 700;
+    color:#ededed;
 }
 
 body{
-    background:yellow;
+    background:black;
 }
 
 .header{
@@ -23,7 +15,7 @@ body{
     left:0;
     width:85%;
     padding: 20px 10%;
-    background: transparent;
+    background: black;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -32,14 +24,14 @@ body{
 
 .logo{
     font-size:25px;
-    color: green;
+    color: #ededed;
     text-decoration: none;
     font-weight: 700;
 }
 
 .narbar a {
     font-size: 20px;
-    color:green;
+    color: #ededed;
     text-decoration: none;
     font-weight: 700;
     margin-left:30px;
@@ -47,7 +39,7 @@ body{
 
 .narbar a:hover,
 .narbar a.active{
-    color:black;
+    color:yellow;
 }
 /*-------------------------------------------------------Home Page-------------------------------------------------------*/
 .homepage {
@@ -65,17 +57,13 @@ body{
     font-size: 30px;
     font-weight: 700;
     margin: 0;
-}
-
-.homepage-content h1:hover {
-    font-variation-settings: "wght" 582; 
-    letter-spacing: 1px;
+    color:#ededed;
 }
 
 .homepage-content h3 {
     font-size: 30px;
     font-weight: 700;
-    color:blue;
+    color:#ededed;
 }
 
 .homepage-content .btn-box{
@@ -95,11 +83,12 @@ body{
     border: 3px solid #00abf0;
     border-radius:100px;
     font-size: 20px;
-    color:#081b29;
+    color:#ededed;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     z-index:1;
+    overflow: hidden;
 }
 
 .btn-box a::before{
@@ -110,7 +99,7 @@ body{
     left:0;
     width: 0;
     height:100%;
-    background:yellow;
+    background:black;
     z-index: -1;
     transition: .5s;
 }
@@ -128,17 +117,89 @@ body{
 }
 
 .homepage-contact a{
+    position: relative;
     display:inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background:transparent;
+    background:#00abf0;
     border:2px solid #00abf0;
     border-radius:50%;
     font-size:20px;
-    color:#00abf0;
+    color:#ededed;
     text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
 }
 
-/*---------------------------------------------------Other Pages----------------------------------------------*/
+.homepage-contact a::before{
+    content:'';
+    position:absolute;
+    border-radius:100px;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    background:black;
+    z-index: -1;
+    transition: .5s;
+}
+
+.homepage-contact a:hover::before{
+    width:100%;
+}
+
+
+img{
+    align-items: center;
+    max-width: 300px;
+    float:right;
+    margin-right:250px;
+    margin-top: 150px;
+}
+
+/*---------------------------------------------------Project Pages----------------------------------------------*/
+.projectPage{
+    height:140vh;
+    display:flex;           /*to display your content in a more flexible manner*/ 
+    align-items: center;
+    padding:0 10%;
+    font-size:20px;
+    color: #ededed;
+}
+
+.projectPage-content h2{
+    font-size: 40px;
+    color: #ededed;
+}
+
+/*---------------------------------------------------Toolbelt Pages----------------------------------------------*/
+.toolbeltPage{
+    height:100vh;
+    display:flex;           /*to display your content in a more flexible manner*/ 
+    align-items: center;
+    padding:0 10%;
+    font-size: 20px;
+    color: #ededed;
+}
+
+.toolbeltPage-content h2{
+    font-size: 40px;
+    color: #ededed;
+}
+
+/*---------------------------------------------------Job Experience Pages----------------------------------------------*/
+.jobPage{
+    height:100vh;
+    display:flex;           /*to display your content in a more flexible manner*/ 
+    align-items: center;
+    padding:0 10%;
+    font-size: 20px;
+    color: #ededed;
+}
+
+.jobPage-content h2{
+    font-size: 40px;
+    color: #ededed;
+}

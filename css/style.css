@@ -1,7 +1,6 @@
+/*-----------------------------------------------------default setting------------------------------------------------*/
 .fontstyle{
-    text-transform: capitalize;
-    font-size: 30px;
-    font-family: monospace;
+    font-family:sans-serif;
 }
 
 .fontsize{
@@ -9,19 +8,137 @@
     color: black;
 }
 
-div {
-    cursor: pointer;
-    margin: auto;
-    font-size: 5vmin;
-    font-weight: 300;
-    transition: font-weight 250ms ease-in-out;
-  }
+p{
+    font-size: 30px;
+    font-weight: 700;
+}
 
-h1:hover {
+body{
+    background:yellow;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:85%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+}
+
+.logo{
+    font-size:25px;
+    color: green;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.narbar a {
+    font-size: 20px;
+    color:green;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left:30px;
+}
+
+.narbar a:hover,
+.narbar a.active{
+    color:black;
+}
+/*-------------------------------------------------------Home Page-------------------------------------------------------*/
+.homepage {
+    height:100vh;
+    display:flex;
+    align-items: center;
+    padding:0 10%;
+}
+
+.homepage-content{
+    max-width: 700px;
+}
+
+.homepage-content h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.homepage-content h1:hover {
     font-variation-settings: "wght" 582; 
     letter-spacing: 1px;
 }
 
-p {
-    color:brown
+.homepage-content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color:blue;
 }
+
+.homepage-content .btn-box{
+    width:345px;
+    height:50px;
+    background:transparent;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 3px solid #00abf0;
+    border-radius:100px;
+    font-size: 20px;
+    color:#081b29;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index:1;
+}
+
+.btn-box a::before{
+    content:'';
+    position:absolute;
+    border-radius:100px;
+    top:0;
+    left:0;
+    width: 0;
+    height:100%;
+    background:yellow;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width:100%;
+}
+
+.homepage-contact{
+    position:absolute;
+    bottom:40px;
+    width:170px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.homepage-contact a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    border:2px solid #00abf0;
+    border-radius:50%;
+    font-size:20px;
+    color:#00abf0;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------Other Pages----------------------------------------------*/

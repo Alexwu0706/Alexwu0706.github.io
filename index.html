@@ -33,7 +33,10 @@
         <div class="homepage-content">
             <h1>Hi, here is Bailun (Alex) Wu, EIT</h1>
             
-            <h3>Engineering in Training #182862</h3>
+            <h2 class="hero-role">
+                <span id="typing"; transition: all 0.5s ease;"></span>
+                <span class="cursor" style="color: #ffffff;">|</span>
+            </h2>
 
             <p>
                A recent UCLA graduate with a B.S. in Electrical Engineering, currently working as a full-time Electrical Test Engineer at ESP Safety Inc. My work focuses on fixture troubleshooting and test equipment design. Open to connecting.
@@ -53,6 +56,45 @@
     
         <!--<img class="photo_pos" src="image/Selfie.JPG" alt="my_Selfie" style="float:right" width=300px height=400px>-->
     </section>
+
+<script>
+const text = ["Electrical Engineer", "Test Engineer", "Analog Design Engineer"];
+const colors = ["#38bdf8", "#00ffcc", "#a855f7"]; // Blue, Cyan, Purple
+const shadows = [
+    "0 0 8px rgba(56, 189, 248, 0.7)", 
+    "0 0 8px rgba(0, 255, 204, 0.7)", 
+    "0 0 8px rgba(168, 85, 247, 0.7)"
+];
+
+let i = 0, j = 0, isDeleting = false;
+
+function type() {
+    const current = text[i];
+    const typingElement = document.getElementById("typing");
+
+    // Apply the color and shadow based on the current index i
+    typingElement.style.color = colors[i];
+    typingElement.style.textShadow = shadows[i];
+
+    if (isDeleting) j--; else j++;
+    
+    typingElement.textContent = current.substring(0, j);
+
+    if (!isDeleting && j === current.length) { 
+        isDeleting = true; 
+        setTimeout(type, 1200); 
+        return; 
+    }
+    else if (isDeleting && j === 0) { 
+        isDeleting = false; 
+        i = (i + 1) % text.length; 
+    }
+    
+    setTimeout(type, isDeleting ? 45 : 90);
+}
+type();
+</script>
+
 </body>
 
 </html>

@@ -5,6 +5,73 @@ p{
     color:#ededed;
 }
 
+.homepage-contact a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #38bdf8;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #38bdf8;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+}
+
+.homepage-contact a:hover {
+    background: #38bdf8;
+    color: #ffffff; /* Deep background color for contrast */
+    box-shadow: 0 0 20px #38bdf8;
+    transform: scale(1.4) rotate(10deg);
+}
+
+/* Navigation Link Container */
+.nav-links li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f8fafc; /* Off-white */
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* The Modern Hover Effect: Sliding Underline */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff; 
+    transition: width 0.5s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    transform: translateY(-2px);
+}
+.cursor {
+  color: #ffffff;
+}
+
+#typing {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 255, 204, 0.7);
+}
+
 body{
     background:black;
 }

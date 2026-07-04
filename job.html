@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="author" content="Bailun (Alex) Wu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional experience of Bailun (Alex) Wu across electrical test engineering, tutoring, and customer-facing operations.">
     <title>Bailun Wu's Website</title>
     <link rel="icon" href="image/electrical.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -17,87 +21,72 @@
         <a href="https://en.wikipedia.org/wiki/Electrical_engineering#:~:text=Electrical%20engineering%20is%20an%20engineering,electricity%2C%20electronics%2C%20and%20electromagnetism." class="logo" title="Ready to explore more about Electrical Engineering?">The Universe of EE</a>
         <nav class="narbar">
             <ul class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="project.html" >Project</a>
-                <a href="toolbelt.html" >Toolbelt</a>
-                <a href="job.html" class = "active">Job Experience</a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="toolbelt.html">Toolbelt</a></li>
+                <li><a href="job.html" class="active">Job Experience</a></li>
             </ul>
         </nav>
     </header>
 
-    <section style="padding: 60px 10%;">
-       <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 45px; color: #ffffff;">Job Experience</h2>
+    <main class="section-shell section-stack">
+        <section>
+            <p class="eyebrow">Professional Timeline</p>
+            <h1 class="page-title">Job Experience</h1>
+            <p class="section-intro">Roles that shaped my engineering rigor, communication style, and practical execution.</p>
+        </section>
 
-        <div class="job-card" 
-             onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='#38bdf8'; this.style.boxShadow='0 10px 30px rgba(56, 189, 248, 0.2)';" 
-             onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none';"
-             style="background: #1e293b; padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; transition: all 0.3s ease; cursor: default;">
-            
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                <div>
-                    <h3 style="margin: 0; color: #38bdf8; font-size: 1.4rem;">Electrical Test Engineer</h3>
-                    <p style="margin: 5px 0; font-style: italic; color: #94a3b8;">ESP Safety, Inc.</p>
+        <section class="section-stack">
+            <article class="job-card">
+                <div class="job-topline">
+                    <div>
+                        <h2>Test Engineer</h2>
+                        <p class="company">Cambridge Industries Group</p>
+                    </div>
+                    <p class="job-meta">04/2026 - Present<br>Santa Clara, CA</p>
                 </div>
-                <div style="text-align: right;">
-                    <small style="color: #64748b;">08/2025 - </small>
-                    <span style="display: inline-block; color: #38bdf8; font-weight: 600; font-size: 0.9rem;">Present</span>
-                    <br><small style="color: #64748b;">San Jose, CA</small>
-                </div>
-            </div>
-            
-            <ul style="padding-left: 20px; color: #cbd5e1;">
-                <li style="margin-bottom: 8px;">Designed, developed, tested, and integrated test equipment to aid production and troubleshooting of gas detectors.</li>
-                <li style="margin-bottom: 8px;">Conducted calibration and functional testing of gas and flame detectors to validate sensor performance.</li>
-                <li style="margin-bottom: 8px;">Implemented new fixtures and tooling to improve assembly efficiency and quality.</li>
-                <li style="margin-bottom: 8px;">Performed engineering analysis on component failures and interfaced with vendors.</li>
-            </ul>
-        </div>
+                <ul>
+                    <li>Understand the physics and design of optical communication products, specifically optical transceivers.</li>
+                    <li>Collaborate with the engineering team to troubleshoot issues, improve performance, and provide data analysis.</li>
+                    <li>Work closely with the firmware team to understand existing embedded firmware features.</li>
+                    <li>Develop and validate unit tests for firmware automation testing.</li>
+                    <li>Execute test cases for optical transceiver evaluation.</li>
+                </ul>
+            </article>
 
-        <div class="job-card" 
-             onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='#38bdf8'; this.style.boxShadow='0 10px 30px rgba(56, 189, 248, 0.2)';" 
-             onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none';"
-             style="background: #1e293b; padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; transition: all 0.3s ease; cursor: default;">
-            
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                <div>
-                    <h3 style="margin: 0; color: #38bdf8; font-size: 1.4rem;">Math Tutor</h3>
-                    <p style="margin: 5px 0; font-style: italic; color: #94a3b8;">C2 Education</p>
+            <article class="job-card">
+                <div class="job-topline">
+                    <div>
+                        <h2>Electrical Test Engineer</h2>
+                        <p class="company">ESP Safety, Inc.</p>
+                    </div>
+                    <p class="job-meta">08/2025 - 04/2026<br>San Jose, CA</p>
                 </div>
-              <div style="text-align: right;">
-                    <small style="color: #64748b;">06/2022 - 09/2022</small>
-                    <br><small style="color: #64748b;">San Francisco, CA</small>
-                </div>
-            </div>
-            
-            <ul style="padding-left: 20px; color: #cbd5e1;">
-                <li style="margin-bottom: 8px;">Tutored high school level math topics and SAT/ACT preparation.</li>
-                <li style="margin-bottom: 8px;">Guided and assisted students with math homework.</li>
-            </ul>
-        </div>
+                <ul>
+                    <li>Designed, developed, tested, and integrated test equipment to aid production and troubleshooting of gas detectors.</li>
+                    <li>Conducted calibration and functional testing of gas and flame detectors to validate sensor performance.</li>
+                    <li>Implemented new fixtures and tooling to improve assembly efficiency and quality.</li>
+                    <li>Performed engineering analysis on component failures and interfaced with vendors.</li>
+                </ul>
+            </article>
 
-        <div class="job-card" 
-             onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='#38bdf8'; this.style.boxShadow='0 10px 30px rgba(56, 189, 248, 0.2)';" 
-             onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none';"
-             style="background: #1e293b; padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; transition: all 0.3s ease; cursor: default;">
-            
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                <div>
-                    <h3 style="margin: 0; color: #38bdf8; font-size: 1.4rem;">Retail Sales Associate</h3>
-                    <p style="margin: 5px 0; font-style: italic; color: #94a3b8;">SFSU Bookstore</p>
+            <article class="job-card">
+                <div class="job-topline">
+                    <div>
+                        <h2>Retail Sales Associate</h2>
+                        <p class="company">SFSU Bookstore</p>
+                    </div>
+                    <p class="job-meta">06/2022 - 09/2022<br>San Francisco, CA</p>
                 </div>
-                <div style="text-align: right;">
-                    <small style="color: #64748b;">06/2022 - 09/2022</small>
-                    <br><small style="color: #64748b;">San Francisco, CA</small>
-                </div>
-            </div>
-            
-            <ul style="padding-left: 20px; color: #cbd5e1;">
-                <li style="margin-bottom: 8px;">Operated cash registers and processed financial aid payments.</li>
-                <li style="margin-bottom: 8px;">Processed and packed orders for shipping and set up displays.</li>
-            </ul>
-        </div>
-        
-    </section>
+                <ul>
+                    <li>Operated cash registers and processed financial aid payments.</li>
+                    <li>Processed and packed orders for shipping and set up displays.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
 
 </body>
+
+</html>
 

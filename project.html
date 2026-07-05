@@ -42,15 +42,6 @@
                 </ul>
             </nav>
             <div class="header-tools">
-                <div class="site-search" role="search">
-                    <button type="button" id="search-toggle" class="search-toggle" aria-label="Open search">
-                        <i class='bx bx-search' aria-hidden="true"></i>
-                    </button>
-                    <div class="search-panel">
-                        <input id="site-search-input" type="search" placeholder="Search content" aria-label="Search site content">
-                        <div id="search-results" class="search-results"></div>
-                    </div>
-                </div>
                 <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle day and night mode">
                     <i class='bx bx-moon'></i>
                     <span>Night</span>
@@ -70,6 +61,16 @@
             <article class="panel-card">
                 <h2>UCLA IEEE Micromouse</h2>
                 <p class="card-link"><a href="https://ieeebruins.com/projects">View UCLA IEEE project context</a></p>
+                <div class="project-media-strip" aria-label="Micromouse media preview">
+                    <figure class="project-media-card">
+                        <img src="https://www.ieeebruins.com/_app/immutable/assets/mm1.36363fe1.png" alt="UCLA IEEE Micromouse robot image" loading="lazy">
+                        <figcaption>Robot build view</figcaption>
+                    </figure>
+                    <figure class="project-media-card">
+                        <img src="https://www.ieeebruins.com/_app/immutable/assets/mm2.004ad9fa.gif" alt="UCLA IEEE Micromouse movement demo GIF" loading="lazy">
+                        <figcaption>Maze run demo</figcaption>
+                    </figure>
+                </div>
                 <ul>
                     <li>Designed circuit schematics and PCB for an autonomous maze-solving robot using Autodesk EAGLE.</li>
                     <li>Developed a twin-PID-loop error adjustment algorithm, enabling a 60% speed increase without losing precision.</li>
@@ -79,6 +80,12 @@
 
             <article class="panel-card">
                 <h2>Path Following Car</h2>
+                <div class="project-media-strip" aria-label="Path Following Car media preview">
+                    <figure class="project-media-card">
+                        <img src="image/Path%20Following%20Robot.jpg" alt="Path-following robot platform" loading="lazy">
+                        <figcaption>TI-RSLK path-following robot</figcaption>
+                    </figure>
+                </div>
                 <ul>
                     <li>Utilized the TI Robotics System Learning Kit to implement PID controls on a robotic car.</li>
                     <li>Achieved 18.3 seconds on a 3.4-meter track through tuning and closed-loop feedback optimization.</li>
@@ -88,6 +95,16 @@
 
             <article class="panel-card">
                 <h2>ECG Design</h2>
+                <div class="project-media-strip" aria-label="ECG Design media preview">
+                    <figure class="project-media-card">
+                        <img src="image/ECG%20Image.jpg" alt="ECG board build and measurement setup" loading="lazy">
+                        <figcaption>ECG hardware implementation</figcaption>
+                    </figure>
+                    <figure class="project-media-card">
+                        <img src="image/ECG%20design%20theory.jpg" alt="ECG analog front-end design theory diagram" loading="lazy">
+                        <figcaption>Signal conditioning theory</figcaption>
+                    </figure>
+                </div>
                 <ul>
                     <li>Worked in teams to design, construct, and test boards capable of measuring human electrocardiograms.</li>
                     <li>Designed analog front-end stages for biopotential signal conditioning, including amplification and filtering.</li>
@@ -97,16 +114,14 @@
             </article>
 
             <article class="panel-card">
-                <h2>Solar Powered Vehicle</h2>
-                <ul>
-                    <li>Performed power system optimization through embedded passive component circuit analysis.</li>
-                    <li>Worked on PCB design and solar panel integration for practical energy capture.</li>
-                    <li>Applied signal processing and power factor correction principles in control-focused implementation.</li>
-                </ul>
-            </article>
-
-            <article class="panel-card">
                 <h2>The Stars Align</h2>
+                <p class="card-link"><a href="https://align-stars.netlify.app/">Start Playing The Stars Align</a></p>
+                <div class="project-media-strip" aria-label="The Stars Align media preview">
+                    <figure class="project-media-card">
+                        <img src="image/3D-Sokoban.jpg" alt="The Stars Align Sokoban-inspired game screenshot" loading="lazy">
+                        <figcaption>Sokoban-inspired puzzle scene</figcaption>
+                    </figure>
+                </div>
                 <ul>
                     <li>Built a 2D puzzle game inspired by Sokoban where players push stars into constellation layouts.</li>
                     <li>Designed gameplay to emphasize analytical thinking and strategic movement in constrained space.</li>

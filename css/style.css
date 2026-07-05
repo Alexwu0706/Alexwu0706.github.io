@@ -80,21 +80,21 @@ html.theme-animating .company-badge {
 }
 
 [data-theme="light"] {
-    --bg: #dae6ec;
-    --bg-soft: #cddce5;
-    --panel: #d9e7ef;
-    --panel-strong: #d2e2eb;
+    --bg: #c9d9e2;
+    --bg-soft: #bfd2dd;
+    --panel: #cbdee8;
+    --panel-strong: #c3d7e2;
     --text: #112f3f;
     --muted: #2b4d60;
-    --line: rgba(17, 47, 63, 0.2);
+    --line: rgba(17, 47, 63, 0.25);
     --accent: #006f96;
     --accent-soft: #0a8d68;
     --focus: #ca7b00;
-    --shadow: 0 16px 30px rgba(10, 35, 53, 0.16);
+    --shadow: 0 18px 34px rgba(10, 35, 53, 0.22);
     --page-background:
-        radial-gradient(circle at 10% 18%, rgba(0, 148, 197, 0.11), transparent 34%),
-        radial-gradient(circle at 88% 25%, rgba(10, 141, 104, 0.08), transparent 36%),
-        linear-gradient(170deg, #dfeaf1, #d5e2ea 62%, #cfdee7 100%);
+        radial-gradient(circle at 10% 18%, rgba(0, 148, 197, 0.16), transparent 36%),
+        radial-gradient(circle at 88% 25%, rgba(10, 141, 104, 0.13), transparent 38%),
+        linear-gradient(170deg, #d3e2ea, #c8d9e3 62%, #c0d3de 100%);
 }
 
 * {
@@ -136,10 +136,10 @@ main {
 
 [data-theme="light"] .header {
     background:
-        linear-gradient(122deg, rgba(221, 234, 242, 0.96), rgba(211, 227, 237, 0.95) 58%, rgba(205, 222, 233, 0.96)),
-        radial-gradient(circle at 12% -160%, rgba(0, 127, 168, 0.18), transparent 54%),
-        radial-gradient(circle at 90% -190%, rgba(10, 141, 104, 0.13), transparent 56%);
-    box-shadow: 0 8px 24px rgba(13, 42, 58, 0.13);
+        linear-gradient(122deg, rgba(206, 222, 232, 0.97), rgba(197, 215, 226, 0.96) 58%, rgba(190, 209, 221, 0.97)),
+        radial-gradient(circle at 12% -160%, rgba(0, 127, 168, 0.24), transparent 56%),
+        radial-gradient(circle at 90% -190%, rgba(10, 141, 104, 0.19), transparent 58%);
+    box-shadow: 0 10px 26px rgba(13, 42, 58, 0.2);
 }
 
 .header::before,
@@ -450,14 +450,14 @@ main {
 [data-theme="light"] .panel-card,
 [data-theme="light"] .job-card,
 [data-theme="light"] .metric-card {
-    background: linear-gradient(165deg, #dde9f0, #d3e2ea);
-    border-color: rgba(13, 42, 58, 0.12);
+    background: linear-gradient(165deg, #d0e0e9, #c4d6e0);
+    border-color: rgba(13, 42, 58, 0.18);
 }
 
 [data-theme="light"] .story-item,
 [data-theme="light"] .stat-pill {
-    background: linear-gradient(165deg, #dce9f0, #d3e2ea);
-    border-color: rgba(13, 42, 58, 0.14);
+    background: linear-gradient(165deg, #cfdee7, #c2d4de);
+    border-color: rgba(13, 42, 58, 0.2);
 }
 
 [data-theme="light"] .skill-pill {
@@ -466,8 +466,8 @@ main {
 }
 
 [data-theme="light"] .recruiter-band {
-    background: linear-gradient(120deg, rgba(216, 230, 238, 0.95), rgba(206, 222, 232, 0.95));
-    border-color: rgba(13, 42, 58, 0.14);
+    background: linear-gradient(120deg, rgba(202, 219, 229, 0.96), rgba(192, 211, 223, 0.96));
+    border-color: rgba(13, 42, 58, 0.2);
 }
 
 [data-theme="light"] .recruiter-band::before,
@@ -476,9 +476,9 @@ main {
 }
 
 [data-theme="light"] .action-cta {
-    background: linear-gradient(160deg, #dce9f0, #d1e2ea);
+    background: linear-gradient(160deg, #d0e0e9, #c5d8e2);
     color: var(--text);
-    border-color: rgba(13, 42, 58, 0.16);
+    border-color: rgba(13, 42, 58, 0.22);
 }
 
 [data-theme="light"] .action-primary {
@@ -486,8 +486,8 @@ main {
 }
 
 [data-theme="light"] .open-to-banner {
-    color: #0f5c45;
-    background: rgba(0, 170, 122, 0.1);
+    color: #0e5a43;
+    background: rgba(0, 170, 122, 0.16);
 }
 
 [data-theme="light"] .btn-box .btn-outline {
@@ -496,8 +496,8 @@ main {
 }
 
 [data-theme="light"] .homepage-contact a {
-    background: rgba(13, 42, 58, 0.1);
-    border-color: rgba(13, 42, 58, 0.25);
+    background: rgba(13, 42, 58, 0.14);
+    border-color: rgba(13, 42, 58, 0.3);
 }
 
 .theme-toggle:hover {
@@ -761,23 +761,61 @@ li {
 }
 
 .page-home .hero-media {
+    --portrait-shape: circle(50% at 50% 50%);
+    --portrait-frame-stroke: rgba(61, 213, 243, 0.3);
+    --portrait-frame-inner: rgba(124, 245, 178, 0.16);
+    --portrait-glow: linear-gradient(130deg, rgba(61, 213, 243, 0.18), transparent 40%, rgba(124, 245, 178, 0.16));
+    --portrait-photo-shadow: 0 26px 52px rgba(2, 12, 20, 0.52), 0 0 0 1px rgba(233, 242, 249, 0.22) inset;
     animation: heroFadeIn 900ms cubic-bezier(0.22, 1, 0.36, 1) 90ms both;
     z-index: 1;
+    isolation: isolate;
+}
+
+.page-home .hero-media.tone-refined {
+    --portrait-frame-stroke: rgba(61, 213, 243, 0.24);
+    --portrait-frame-inner: rgba(124, 245, 178, 0.12);
+    --portrait-glow: linear-gradient(130deg, rgba(61, 213, 243, 0.12), transparent 42%, rgba(124, 245, 178, 0.12));
+    --portrait-photo-shadow: 0 22px 44px rgba(2, 12, 20, 0.45), 0 0 0 1px rgba(233, 242, 249, 0.18) inset;
+}
+
+.page-home .hero-media.tone-bold {
+    --portrait-frame-stroke: rgba(61, 213, 243, 0.45);
+    --portrait-frame-inner: rgba(124, 245, 178, 0.24);
+    --portrait-glow: linear-gradient(125deg, rgba(61, 213, 243, 0.28), transparent 34%, rgba(124, 245, 178, 0.24));
+    --portrait-photo-shadow: 0 34px 64px rgba(1, 10, 20, 0.62), 0 0 0 1px rgba(233, 242, 249, 0.26) inset;
+}
+
+.page-home .hero-media.shape-hex {
+    --portrait-shape: circle(50% at 50% 50%);
+}
+
+.page-home .hero-media.shape-prism {
+    --portrait-shape: circle(50% at 50% 50%);
+}
+
+.page-home .hero-media.shape-slice {
+    --portrait-shape: circle(50% at 50% 50%);
 }
 
 .page-home .hero-media::before {
     inset: -14px;
-    border: 1px solid rgba(61, 213, 243, 0.24);
-    box-shadow: 0 0 0 1px rgba(124, 245, 178, 0.12) inset;
+    border: 1px solid var(--portrait-frame-stroke);
+    box-shadow: 0 0 0 1px var(--portrait-frame-inner) inset;
     opacity: 0.65;
+    clip-path: var(--portrait-shape);
+    border-radius: 0;
+    z-index: -2;
     animation: haloOrbit 7.5s linear infinite;
 }
 
 .page-home .hero-media::after {
     inset: -8px;
-    background: linear-gradient(130deg, rgba(61, 213, 243, 0.12), transparent 42%, rgba(124, 245, 178, 0.12));
+    background: var(--portrait-glow);
     mix-blend-mode: screen;
-    opacity: 0.52;
+    opacity: 0.62;
+    clip-path: var(--portrait-shape);
+    border-radius: 0;
+    z-index: -1;
 }
 
 .profile-image {
@@ -791,6 +829,13 @@ li {
 }
 
 .page-home .profile-image {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 340px);
+    aspect-ratio: 1 / 1;
+    border-radius: 0;
+    clip-path: var(--portrait-shape);
+    box-shadow: var(--portrait-photo-shadow);
     animation:
         portraitReveal 960ms cubic-bezier(0.2, 0.85, 0.25, 1) 120ms both,
         portraitFloat 6.8s ease-in-out 1.2s infinite;
@@ -1126,6 +1171,39 @@ li {
     text-decoration: underline;
 }
 
+.project-media-strip {
+    margin-top: 0.7rem;
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.project-media-card {
+    margin: 0;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: linear-gradient(160deg, rgba(10, 34, 49, 0.82), rgba(8, 26, 39, 0.88));
+    overflow: hidden;
+}
+
+.project-media-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.project-media-card figcaption {
+    padding: 0.42rem 0.6rem 0.5rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+[data-theme="light"] .project-media-card {
+    background: linear-gradient(160deg, #d0e0e9, #c5d7e1);
+    border-color: rgba(13, 42, 58, 0.2);
+}
+
 .job-topline {
     display: flex;
     justify-content: space-between;
@@ -1325,5 +1403,9 @@ li {
     .recruiter-actions a,
     .recruiter-actions button {
         min-width: 100%;
+    }
+
+    .page-home .hero-media {
+        --portrait-shape: circle(50% at 50% 50%);
     }
 }

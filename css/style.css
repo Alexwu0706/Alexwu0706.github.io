@@ -1178,6 +1178,19 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
+/* Keep project cards readable and prevent media crowding on medium viewports. */
+#projects .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#projects .project-media-strip {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+#projects .panel-card {
+    min-width: 0;
+}
+
 .project-media-card {
     margin: 0;
     border-radius: 12px;
@@ -1403,6 +1416,14 @@ li {
     .recruiter-actions a,
     .recruiter-actions button {
         min-width: 100%;
+    }
+
+    #projects .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .project-media-strip {
+        grid-template-columns: 1fr;
     }
 
     .page-home .hero-media {

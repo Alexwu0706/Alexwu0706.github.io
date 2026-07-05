@@ -52,4 +52,36 @@
         });
     }
 
+    function externalLinksOpenInNewTab() {
+        const links = document.querySelectorAll("a[href]");
+
+        links.forEach((link) => {
+            const href = link.getAttribute("href");
+
+            if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) {
+                return;
+            }
+
+            try {
+                const url = new URL(href, window.location.href);
+                if (url.origin !== window.location.origin) {
+                    link.setAttribute("target", "_blank");
+
+                    const rel = (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+                    if (!rel.includes("noopener")) {
+                        rel.push("noopener");
+                    }
+                    if (!rel.includes("noreferrer")) {
+                        rel.push("noreferrer");
+                    }
+                    link.setAttribute("rel", rel.join(" "));
+                }
+            } catch (error) {
+                // Ignore invalid URLs.
+            }
+        });
+    }
+
+    externalLinksOpenInNewTab();
+
 })();

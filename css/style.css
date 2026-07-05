@@ -1015,8 +1015,8 @@ li {
     gap: 0.7rem;
 }
 
-.page-about .about-intro .page-title,
-.page-about .section-title {
+.page-motion .page-title,
+.page-motion .section-title {
     background: linear-gradient(95deg, var(--text), #bfefff 35%, #9ff0cf 62%, var(--text));
     background-size: 230% 100%;
     -webkit-background-clip: text;
@@ -1025,22 +1025,24 @@ li {
     animation: aboutTitleShift 9s ease-in-out infinite;
 }
 
-.page-about .about-reveal {
+.page-motion:not(.page-home) .site-reveal {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 620ms cubic-bezier(0.22, 1, 0.36, 1), transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
-    transition-delay: var(--about-reveal-delay, 0ms);
+    transition-delay: var(--site-reveal-delay, 0ms);
 }
 
-.page-about .about-reveal.is-visible {
+.page-motion:not(.page-home) .site-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.page-about .about-story .story-item,
-.page-about .stat-pill,
-.page-about .skill-pill,
-.page-about .recruiter-band {
+.page-motion .story-item,
+.page-motion .stat-pill,
+.page-motion .skill-pill,
+.page-motion .recruiter-band,
+.page-motion .panel-card,
+.page-motion .job-card {
     will-change: transform, opacity;
 }
 
@@ -1378,9 +1380,9 @@ li {
         transform: none;
     }
 
-    .page-about .about-intro .page-title,
-    .page-about .section-title,
-    .page-about .about-reveal {
+    .page-motion .page-title,
+    .page-motion .section-title,
+    .page-motion .site-reveal {
         animation: none;
         opacity: 1;
         transform: none;

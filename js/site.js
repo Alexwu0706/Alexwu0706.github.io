@@ -84,18 +84,20 @@
 
     externalLinksOpenInNewTab();
 
-    function initAboutTextMotion() {
-        if (!document.body.classList.contains("page-about")) {
+    function initSiteTextMotion() {
+        if (!document.body.classList.contains("page-motion")) {
             return;
         }
 
-        const revealTargets = document.querySelectorAll(
-            ".about-intro p, .about-story > div, .story-item, #focus-style > div, #focus-style .panel-card, #metrics > div, #metrics .stat-pill, #skills > div, #skills .skill-pill, #contact"
-        );
+        const selector = document.body.classList.contains("page-about")
+            ? ".about-intro p, .about-story > div, .story-item, #focus-style > div, #focus-style .panel-card, #metrics > div, #metrics .stat-pill, #skills > div, #skills .skill-pill, #contact"
+            : "main > section, .panel-card, .job-card, .project-media-card, .story-item, .stat-pill, .recruiter-band";
+
+        const revealTargets = document.querySelectorAll(selector);
 
         revealTargets.forEach((element, index) => {
-            element.classList.add("about-reveal");
-            element.style.setProperty("--about-reveal-delay", `${Math.min(index * 55, 480)}ms`);
+            element.classList.add("site-reveal");
+            element.style.setProperty("--site-reveal-delay", `${Math.min(index * 55, 480)}ms`);
         });
 
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -124,6 +126,6 @@
         revealTargets.forEach((element) => observer.observe(element));
     }
 
-    initAboutTextMotion();
+    initSiteTextMotion();
 
 })();

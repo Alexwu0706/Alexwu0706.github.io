@@ -84,4 +84,46 @@
 
     externalLinksOpenInNewTab();
 
+    function initAboutTextMotion() {
+        if (!document.body.classList.contains("page-about")) {
+            return;
+        }
+
+        const revealTargets = document.querySelectorAll(
+            ".about-intro p, .about-story > div, .story-item, #focus-style > div, #focus-style .panel-card, #metrics > div, #metrics .stat-pill, #skills > div, #skills .skill-pill, #contact"
+        );
+
+        revealTargets.forEach((element, index) => {
+            element.classList.add("about-reveal");
+            element.style.setProperty("--about-reveal-delay", `${Math.min(index * 55, 480)}ms`);
+        });
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) {
+            revealTargets.forEach((element) => element.classList.add("is-visible"));
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries, activeObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    entry.target.classList.add("is-visible");
+                    activeObserver.unobserve(entry.target);
+                });
+            },
+            {
+                threshold: 0.15,
+                rootMargin: "0px 0px -8% 0px"
+            }
+        );
+
+        revealTargets.forEach((element) => observer.observe(element));
+    }
+
+    initAboutTextMotion();
+
 })();

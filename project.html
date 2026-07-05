@@ -6,29 +6,60 @@
     <meta name="author" content="Bailun (Alex) Wu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Engineering projects by Bailun (Alex) Wu including robotics, controls, ECG hardware, and embedded design.">
+    <script>
+        (() => {
+            try {
+                const theme = localStorage.getItem("site-theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.setAttribute("data-theme", theme);
+                }
+            } catch (error) {
+                // Ignore theme init errors and keep default theme.
+            }
+        })();
+    </script>
     <title>Bailun Wu's Website</title>
     <link rel="icon" href="image/electrical.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header class="header">
         <a href="https://en.wikipedia.org/wiki/Electrical_engineering#:~:text=Electrical%20engineering%20is%20an%20engineering,electricity%2C%20electronics%2C%20and%20electromagnetism." class="logo" title="Ready to explore more about Electrical Engineering?">The Universe of EE</a>
-        <nav class="narbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html" class="active">Project</a></li>
-                <li><a href="toolbelt.html">Toolbelt</a></li>
-                <li><a href="job.html">Job Experience</a></li>
-            </ul>
-        </nav>
+        <div class="header-right">
+            <nav class="narbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html" class="active">Project</a></li>
+                    <li><a href="toolbelt.html">Toolbelt</a></li>
+                    <li><a href="job.html">Experience</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+            <div class="header-tools">
+                <div class="site-search" role="search">
+                    <button type="button" id="search-toggle" class="search-toggle" aria-label="Open search">
+                        <i class='bx bx-search' aria-hidden="true"></i>
+                    </button>
+                    <div class="search-panel">
+                        <input id="site-search-input" type="search" placeholder="Search content" aria-label="Search site content">
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle day and night mode">
+                    <i class='bx bx-moon'></i>
+                    <span>Night</span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main class="section-shell section-stack">
+    <main class="section-shell section-stack" id="projects">
         <section>
             <p class="eyebrow">Work Highlights</p>
             <h1 class="page-title">Projects</h1>
@@ -59,6 +90,7 @@
                 <h2>ECG Design</h2>
                 <ul>
                     <li>Worked in teams to design, construct, and test boards capable of measuring human electrocardiograms.</li>
+                    <li>Designed analog front-end stages for biopotential signal conditioning, including amplification and filtering.</li>
                     <li>Captured data with a microcontroller, then performed computer analysis and display.</li>
                     <li>Applied circuit design, cardiac electrophysiology, biophysics, and programming concepts.</li>
                 </ul>
@@ -83,6 +115,7 @@
             </article>
         </section>
     </main>
+    <script src="js/site.js"></script>
 </body>
 
 </html>

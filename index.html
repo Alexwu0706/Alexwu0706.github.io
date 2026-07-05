@@ -6,36 +6,66 @@
     <meta name="author" content="Bailun (Alex) Wu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Bailun (Alex) Wu, Electrical Test Engineer focused on test equipment design, fixture troubleshooting, and applied electrical engineering projects.">
+    <script>
+        (() => {
+            try {
+                const theme = localStorage.getItem("site-theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.setAttribute("data-theme", theme);
+                }
+            } catch (error) {
+                // Ignore theme init errors and keep default theme.
+            }
+        })();
+    </script>
     <title>Bailun Wu's Website</title>
     <link rel="icon" href="image/electrical.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body class="page-home">
     <header class="header">
         <a href="https://en.wikipedia.org/wiki/Electrical_engineering#:~:text=Electrical%20engineering%20is%20an%20engineering,electricity%2C%20electronics%2C%20and%20electromagnetism." class="logo" title="Ready to explore more about Electrical Engineering?">The Universe of EE</a>
-
-        <nav class="narbar">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="toolbelt.html">Toolbelt</a></li>
-                <li><a href="job.html">Job Experience</a></li>
-            </ul>
-        </nav>
+        <div class="header-right">
+            <nav class="narbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="toolbelt.html">Toolbelt</a></li>
+                    <li><a href="job.html">Experience</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+            <div class="header-tools">
+                <div class="site-search" role="search">
+                    <button type="button" id="search-toggle" class="search-toggle" aria-label="Open search">
+                        <i class='bx bx-search' aria-hidden="true"></i>
+                    </button>
+                    <div class="search-panel">
+                        <input id="site-search-input" type="search" placeholder="Search content" aria-label="Search site content">
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle day and night mode">
+                    <i class='bx bx-moon'></i>
+                    <span>Night</span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="hero section-shell">
+        <section class="hero section-shell" id="intro">
             <div class="hero-content">
                 <p class="eyebrow">Electrical Engineering Portfolio</p>
                 <h1>Hi, here is Bailun (Alex) Wu, EIT</h1>
-                <p class="target-headline">Test Engineer | DSP | Optical Transceivers | Firmware Automation | Validation</p>
-                <p class="open-to-banner">Open to Test and Validation Engineering opportunities in the Bay Area (On-site or Hybrid).</p>
+                <p class="target-headline">Test Engineer | Analog Circuit Design | DSP | Optical Validation</p>
+                <p class="open-to-banner">Open to Bay Area Test and Validation roles (On-site/Hybrid).</p>
 
                 <h2 class="hero-role">
                     <span id="typing"></span>
@@ -43,7 +73,7 @@
                 </h2>
 
                 <p class="intro-copy">
-                    A UCLA graduate with a B.S. in Electrical Engineering, currently working as a full-time Test Engineer at Cambridge Industries Group. My work focuses on optical transceiver evaluation, digital signal processing, firmware test automation, and data-driven performance troubleshooting. Open to connecting.
+                    UCLA Electrical Engineering graduate and current Test Engineer at Cambridge Industries Group, focused on analog circuit design, optical transceiver validation, DSP-informed analysis, and firmware test automation. Earned the NCEES Fundamentals of Engineering (FE) credential in 2024.
                 </p>
 
                 <div class="btn-box">
@@ -56,6 +86,8 @@
                     <a href="mailto:alexwu0706@gmail.com" aria-label="Email Bailun Wu"><i class='bx bxl-gmail'></i></a>
                     <a href="https://github.com/Alexwu0706" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
                 </div>
+
+                <p class="card-link"><a href="about.html#about">Read full About Me</a></p>
             </div>
 
             <figure class="hero-media">
@@ -63,83 +95,9 @@
             </figure>
         </section>
 
-        <section class="section-shell recruiter-band">
-            <h2>Recruiter Quick Actions</h2>
-            <div class="recruiter-actions">
-                <a href="image/CV of Bailun Wu.pdf" download>Download Resume</a>
-                <a href="mailto:alexwu0706@gmail.com">Email Alex</a>
-                <a href="https://www.linkedin.com/in/bailun-wu/">LinkedIn</a>
-                <button type="button" id="copy-email">Copy Email</button>
-            </div>
-            <p class="copy-feedback" id="copy-feedback" aria-live="polite"></p>
-        </section>
-
-        <section class="section-shell section-stack recruiter-section">
-            <div>
-                <p class="eyebrow">Proof of Impact</p>
-                <h2 class="section-title">Selected Metrics</h2>
-            </div>
-            <div class="metric-grid">
-                <article class="metric-card">
-                    <p class="metric-value">60%</p>
-                    <p class="metric-label">Speed increase in UCLA IEEE micromouse control performance while maintaining precision.</p>
-                </article>
-                <article class="metric-card">
-                    <p class="metric-value">18.3s</p>
-                    <p class="metric-label">Path-following run time achieved on a 3.4-meter robotics track using PID control.</p>
-                </article>
-                <article class="metric-card">
-                    <p class="metric-value">2</p>
-                    <p class="metric-label">Hardware test domains: gas and flame detector systems, plus optical transceiver evaluation with DSP-informed analysis.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section-shell section-stack recruiter-section">
-            <div>
-                <p class="eyebrow">Recruiter Keywords</p>
-                <h2 class="section-title">Core Skills by Hiring Category</h2>
-            </div>
-            <div class="skill-grid">
-                <article class="panel-card">
-                    <h3>Test and Validation</h3>
-                    <ul>
-                        <li>Test case execution and result analysis</li>
-                        <li>Calibration and functional verification</li>
-                        <li>Failure analysis and troubleshooting</li>
-                    </ul>
-                </article>
-                <article class="panel-card">
-                    <h3>Optical and Hardware</h3>
-                    <ul>
-                        <li>Optical transceiver evaluation</li>
-                        <li>Circuit schematic and PCB workflow</li>
-                        <li>Fixture and tooling development</li>
-                    </ul>
-                </article>
-                <article class="panel-card">
-                    <h3>Firmware and Automation</h3>
-                    <ul>
-                        <li>Firmware unit test development</li>
-                        <li>Automation-oriented validation support</li>
-                        <li>Cross-functional debug collaboration</li>
-                        <li>Signal-quality assessment for firmware test workflows</li>
-                    </ul>
-                </article>
-                <article class="panel-card">
-                    <h3>DSP and Data Tools</h3>
-                    <ul>
-                        <li>Python, C, C++, MATLAB</li>
-                        <li>Digital signal processing and filtering fundamentals</li>
-                        <li>Time-domain and frequency-domain analysis</li>
-                        <li>Data analysis and reporting</li>
-                        <li>Technical documentation</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
     </main>
 
+    <script src="js/site.js"></script>
     <script>
         const text = ["Electrical Engineer", "DSP Engineer", "Test Engineer"];
         const colors = ["#3dd5f3", "#7cf5b2", "#f5bf57"];
@@ -184,17 +142,6 @@
 
         type();
 
-        const copyEmailButton = document.getElementById("copy-email");
-        const copyFeedback = document.getElementById("copy-feedback");
-
-        copyEmailButton.addEventListener("click", async () => {
-            try {
-                await navigator.clipboard.writeText("alexwu0706@gmail.com");
-                copyFeedback.textContent = "Email copied: alexwu0706@gmail.com";
-            } catch (error) {
-                copyFeedback.textContent = "Copy failed. Please email alexwu0706@gmail.com directly.";
-            }
-        });
     </script>
 
 </body>

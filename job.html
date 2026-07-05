@@ -6,12 +6,24 @@
     <meta name="author" content="Bailun (Alex) Wu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional experience of Bailun (Alex) Wu across electrical test engineering, tutoring, and customer-facing operations.">
+    <script>
+        (() => {
+            try {
+                const theme = localStorage.getItem("site-theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.setAttribute("data-theme", theme);
+                }
+            } catch (error) {
+                // Ignore theme init errors and keep default theme.
+            }
+        })();
+    </script>
     <title>Bailun Wu's Website</title>
     <link rel="icon" href="image/electrical.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -19,17 +31,36 @@
 
     <header class="header">
         <a href="https://en.wikipedia.org/wiki/Electrical_engineering#:~:text=Electrical%20engineering%20is%20an%20engineering,electricity%2C%20electronics%2C%20and%20electromagnetism." class="logo" title="Ready to explore more about Electrical Engineering?">The Universe of EE</a>
-        <nav class="narbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="toolbelt.html">Toolbelt</a></li>
-                <li><a href="job.html" class="active">Job Experience</a></li>
-            </ul>
-        </nav>
+        <div class="header-right">
+            <nav class="narbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="toolbelt.html">Toolbelt</a></li>
+                    <li><a href="job.html" class="active">Experience</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+            <div class="header-tools">
+                <div class="site-search" role="search">
+                    <button type="button" id="search-toggle" class="search-toggle" aria-label="Open search">
+                        <i class='bx bx-search' aria-hidden="true"></i>
+                    </button>
+                    <div class="search-panel">
+                        <input id="site-search-input" type="search" placeholder="Search content" aria-label="Search site content">
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle day and night mode">
+                    <i class='bx bx-moon'></i>
+                    <span>Night</span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main class="section-shell section-stack">
+    <main class="section-shell section-stack" id="experience">
         <section>
             <p class="eyebrow">Professional Timeline</p>
             <h1 class="page-title">Job Experience</h1>
@@ -39,9 +70,12 @@
         <section class="section-stack">
             <article class="job-card">
                 <div class="job-topline">
-                    <div>
+                    <div class="company-wrap">
+                        <img src="image/CIG Logo.jpg" alt="Cambridge Industries Group logo" class="company-logo logo-wide">
+                        <div>
                         <h2>Test Engineer</h2>
                         <p class="company">Cambridge Industries Group</p>
+                        </div>
                     </div>
                     <p class="job-meta">04/2026 - Present<br>Santa Clara, CA</p>
                 </div>
@@ -56,9 +90,12 @@
 
             <article class="job-card">
                 <div class="job-topline">
-                    <div>
+                    <div class="company-wrap">
+                        <img src="image/ESP Safety Logo.webp" alt="ESP Safety logo" class="company-logo logo-wide">
+                        <div>
                         <h2>Electrical Test Engineer</h2>
                         <p class="company">ESP Safety, Inc.</p>
+                        </div>
                     </div>
                     <p class="job-meta">08/2025 - 04/2026<br>San Jose, CA</p>
                 </div>
@@ -72,9 +109,12 @@
 
             <article class="job-card">
                 <div class="job-topline">
-                    <div>
+                    <div class="company-wrap">
+                        <img src="image/SFSU logo.webp" alt="SFSU Bookstore logo" class="company-logo logo-square">
+                        <div>
                         <h2>Retail Sales Associate</h2>
                         <p class="company">SFSU Bookstore</p>
+                        </div>
                     </div>
                     <p class="job-meta">06/2022 - 09/2022<br>San Francisco, CA</p>
                 </div>
@@ -85,6 +125,8 @@
             </article>
         </section>
     </main>
+
+    <script src="js/site.js"></script>
 
 </body>
 
